@@ -8,6 +8,11 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://admin:admin@ds036577.mlab.com:36577/db_information', {}, function (err) {
+  console.log(err);
+});
 var app = express();
 
 //add swig engine
